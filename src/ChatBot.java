@@ -23,7 +23,7 @@ public class ChatBot {
     }
 
     // method that converts feet to meters and returns the meters
-    public double convertFeetToMeters(int numFeet) {
+    public double convertFeetToMeters(double numFeet) {
         final double METERS_PER_FOOT = 0.3048;
         return METERS_PER_FOOT * numFeet;
     }
@@ -45,6 +45,13 @@ public class ChatBot {
         return "It was nice talking with you! Have a great day! Sincerely, " + name;
     }
 
-    //New Methods
-
+    //New Non-Void Method
+    public double calcHeightToMeters(int feet, int inches) {
+        double heightInMeters = convertFeetToMeters(feet + (inches / 12.0));
+        return heightInMeters;
+    }
+    //New Void Method
+    public void printHeight(double heightInMeters) {
+        System.out.println("Your height is " + heightInMeters + " meters!");
+    }
 }

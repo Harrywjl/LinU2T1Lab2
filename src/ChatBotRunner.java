@@ -8,5 +8,8 @@ public class ChatBotRunner {
         debbie.addNumbers(14, 54, 38);
         debbie.goodbye();
 
+        double height = debbie.calcHeightToMeters(5,11);
+        debbie.printHeight(height);
+
     }
 }
